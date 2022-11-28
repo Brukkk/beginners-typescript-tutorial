@@ -10,19 +10,16 @@ interface ID {
   id:string;
 }
 interface User extends ID {
-  
   firstName: string;
   lastName: string;
 }
 
 interface Post extends ID {
-  
   title: string;
   body: string;
 }
 
 interface Comment extends ID {
-  
   comment: string;
 }
 
