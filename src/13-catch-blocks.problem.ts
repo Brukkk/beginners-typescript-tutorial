@@ -6,7 +6,10 @@ const tryCatchDemo = (state: "fail" | "succeed") => {
       throw new Error("Failure!");
     }
   } catch (e) {
-    return e.message;
+    /* return (e as Error).message;  not checking if E is an error but rather casting it as one / not ideal or best*/
+    if (e instanceof SyntaxError){ // pretty similar to last one but actually checked the type of the event
+      return e.message;
+    }
   }
 };
 
